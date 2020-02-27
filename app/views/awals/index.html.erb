@@ -1,0 +1,23 @@
+<h1>Awal#index</h1>
+<p>Find me in app/views/awal/index.html.erb</p>
+
+<%= link_to 'New', new_awal_path() %>
+<table>
+    <tr>
+        <td>Nama</td>
+        <td>Status</td>
+        <td>Umur</td>
+    </tr>
+    <% @data.each do |s| %>
+    <tr>
+        <td><%= s.nama %></td>
+        <td><%= s.status %></td>
+        <td><%= s.umur %></td>
+        <td>
+            <%= link_to 'Detail', awal_path(s) %>
+            <%= link_to 'Edit', edit_awal_path(s) %>
+            
+        </td>
+    </tr>
+    <% end %>
+</table>
